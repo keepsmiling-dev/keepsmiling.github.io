@@ -8,25 +8,38 @@
 }
 
  :root {
-  --primary-color: #32CCB3;
-  --secondary-color: #4facfe;
-  --text-dark: #333;
-  --text-light: #777;
-  --white: #fff;
+    --primary-color: #32CCB3;
+    --secondary-color: #4facfe;
+    --text-dark: #333;
+    --text-light: #777;
+    --white: #fff;
 } 
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }/* 清除 */
 
 body {
-  font-family: 'Poppins', sans-serif;
-  line-height: 1.6;
-  color: var(--text-dark);
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
 }
-
+.section-title {
+    text-align: center; 
+    margin-bottom: 60px; 
+    
+}
+.section-title h2 {
+    font-size: 2.5rem; /* 大标题字体大小 */
+    color: var(--text-dark); /* 使用CSS变量定义的深色文字 */
+    margin-bottom: 15px; /* 与下方副标题分隔 */
+}
+.section-title p {
+  color: var(--text-light); /* 使用CSS变量定义的浅色文字 */
+  font-size: 1.1rem; /* 副标题字体大小 */
+}
 
 /* 顶部导航条start */
 .header {
@@ -93,23 +106,16 @@ body {
     background-color: inherit;
 
     /* 基础垂直居中 */
-    /* display: flex;
+    display: flex;
     align-items: center; 
-    justify-content: center;   
-    gap: 20px;  */
-
-
-    /* 使用Grid布局 */
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* 两列布局 */
-    align-items: center;
+    justify-content: flex-end;   
+    gap: 20px; 
 }
 
 .home-content {
-    grid-column: 2; /* 放在第二列 */
-    justify-self: start; /* 在第二列内左对齐 */
-    padding-left: 50px; /* 添加一些左边距 */
+    width: 45%; 
     max-width: 500px;
+    margin-right: 90%; 
 } 
 .home-title {
     font-size: 3.5rem;
@@ -124,25 +130,163 @@ body {
 /* 主页end */
 
 
-
-.experience_wrapper {
-    height: 500px;
-    background-color: blue;
-    border-color: black;
-    border-style: dotted;
+/* 经历start */
+.experience {
+    background-color: #f9f9f9;
+    padding: 80px 0;
 }
+.experience_wrapper {
+    height: auto;  /* 自动还是固定 */
+    background-color: transparent;
+    border: none;
+}
+.timeline {
+    position: relative; 
+    max-width: 800px; 
+    margin: 0 auto; 
+}
+.timeline::before {
+    content: ''; 
+    position: absolute; 
+    left: 50%; 
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: var(--primary-color); 
+    transform: translateX(-50%);
+}
+.timeline-item {
+    display: flex; 
+    margin-bottom: 40px; 
+    position: relative;
+}
+
+/* 奇数项和偶数项交替布局 */
+.timeline-item:nth-child(odd) {
+    flex-direction: row; 
+}
+
+.timeline-item:nth-child(even) {
+    flex-direction: row-reverse; 
+}
+.timeline-date {
+    /* 盒子 */
+    width: 50%;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    border-radius: 20px;   /* 圆角设计 */
+
+    /* 位置居中 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    /* 字体 */
+    font-weight: 600;
+    font-size: large;
+    color: white;
+}
+.timeline-content {
+    width: 45%;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.timeline-content h3 {
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+.timeline-content p {
+    margin-bottom: 5px;
+}
+/* 经历end */
+
 
 
 /* 作品集start */
+.portfolio {
+    padding: 80px 0;
+    background-color: white;
+}
 .portfolio_wrapper {
-    height: 500px;
-    background-color: orange;
-    border-color: black;
-    border-style: dotted;
+    height:  auto;
+    background-color: transparent;
+    border: none;
+}
+.portfolio-list {
+    /* 布局——网格布局 */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+.portfolio-item {
+    background-color: white; 
+    border-radius: 8px; 
+    overflow: hidden; 
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); 
+    transition: transform 0.3s;
+}
+.portfolio-item:hover {
+    transform: translateY(-10px); /* 悬停时向上移动10px */
+}
+.portfolio-info {
+    padding: 20px;
+}
+.portfolio-img {
+    height: 200px;
+    background-color: #f5f5f5;
+    overflow: hidden;
+}
+.portfolio-img img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;  /* 保持宽高比 */
+    height: auto; /* 保持宽高比 */
+    object-fit: contain; /* 改为contain避免裁剪，确保完整显示 */
+}
+.portfolio-info h3 {
+    color: var(--text-dark);
+    margin-bottom: 10px;
 }
 
+.portfolio-info p {
+    color: var(--text-light);
+    margin-bottom: 15px;
+    }
 
+.portfolio-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 15px;
+}
 
+.portfolio-tech span {
+    background-color: #f0f0f0;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    color: var(--text-dark);
+}
+
+.portfolio-links {
+    display: flex;
+    gap: 15px;
+}
+
+.portfolio-links a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.portfolio-links a:hover {
+    color: #28b39d;
+}
 
 /* 作品集start */
 
