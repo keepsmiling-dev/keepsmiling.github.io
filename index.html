@@ -5,15 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <title>个人简历</title>
+
     <!-- 引入页签图标 -->
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
     <!-- 引入重置样式 -->
     <link rel="stylesheet" href="./css/reset.css">
     <!-- 引入样式 -->
     <link rel="stylesheet" href="./src/index.css">
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 引入字体 -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- 引入图标库 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <!-- 顶部导航条 -->
@@ -150,12 +152,56 @@
             <section class="contact" id="contact">
                 <div class="contact_wrapper container">
                     <!-- 标题 -->
-                    <div class="section-tiltle">
+                    <div class="section-title">
                         <h2>联系我</h2>
                         <p>期待与您交流</p>
                     </div>
 
-                    
+                    <!-- 内容 -->
+                    <div class="contact-content">
+                        <div class="contact-infomation">
+                            <!-- 邮箱信息 -->
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <div class="email">
+                                    <h3>邮箱</h3>
+                                    <p>fengdaiying@qq.com</p>
+                                </div>
+                            </div>
+
+                            <!-- 电话信息 -->
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <div class="phone">
+                                    <h3>电话</h3>
+                                    <p>150-XXXX-XXXX</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-form">
+                                <form>
+                                    <!-- 姓名栏 -->
+                                    <div class="form-group">
+                                        <input type="text" placeholder="您的姓名" required>
+                                    </div>
+                                    <!-- 邮箱栏 -->
+                                    <div class="form-group">
+                                        <input type="email" placeholder="您的邮箱" required>
+                                    </div>
+                                    <!-- 主题栏 -->
+                                    <div class="form-group">
+                                        <input type="text" placeholder="主题" required>
+                                    </div>
+                                    <!-- 留言栏 -->
+                                    <div class="form-group">
+                                        <textarea placeholder="留言内容" rows="6"></textarea>
+                                    </div>
+                                    <!-- 提交 -->
+                                    <button type="submit" class="contact-button">发送信息</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -169,7 +215,8 @@
             <!-- 页脚 -->
             <footer class="footer" id="footer">
                 <div class="footer_wrapper container">
-                    <p></p>
+                    
+                    <p>2025 冯黛莹.版权所有</p>
                 </div>
             </footer>
     </main>
