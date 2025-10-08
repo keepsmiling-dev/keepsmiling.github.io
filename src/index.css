@@ -235,43 +235,26 @@ body {
 .portfolio-info {
     padding: 20px;
 }
-.portfolio-img {
+.portfolio-image{
     height: 200px;
     background-color: #f5f5f5;
     overflow: hidden;
 }
-.portfolio-img img {
+.portfolio-image img {
     max-width: 100%;
     max-height: 100%;
-    width: auto;  /* 保持宽高比 */
-    height: auto; /* 保持宽高比 */
-    object-fit: contain; /* 改为contain避免裁剪，确保完整显示 */
+    width: auto;  
+    height: auto; 
+    object-fit: contain; 
 }
-.portfolio-info h3 {
+.portfolio-information h3 {
     color: var(--text-dark);
     margin-bottom: 10px;
 }
-
-.portfolio-info p {
+.portfolio-information p {
     color: var(--text-light);
     margin-bottom: 15px;
-    }
-
-.portfolio-tech {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-bottom: 15px;
 }
-
-.portfolio-tech span {
-    background-color: #f0f0f0;
-    padding: 5px 10px;
-    border-radius: 15px;
-    font-size: 0.8rem;
-    color: var(--text-dark);
-}
-
 .portfolio-links {
     display: flex;
     gap: 15px;
