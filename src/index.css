@@ -36,8 +36,14 @@ body {
     margin-bottom: 15px; 
 }
 .section-title p {
-  color: var(--text-light); 
-  font-size: 1.1rem;
+    color: var(--text-light); 
+    font-size: 1.1rem;
+    margin-bottom: 60px;
+}
+.section-wrapper {
+    height: auto;  
+    background-color: transparent;
+    border: none; 
 }
 
 /* 顶部导航条start */
@@ -110,7 +116,6 @@ body {
     justify-content: flex-end;   
     gap: 20px; 
 }
-
 .home-content {
     width: 45%; 
     max-width: 500px;
@@ -133,11 +138,6 @@ body {
 .experience {
     background-color: #f9f9f9;
     padding: 80px 0;
-}
-.experience_wrapper {
-    height: auto;  /* 自动还是固定 */
-    background-color: transparent;
-    border: none;
 }
 .timeline {
     position: relative; 
@@ -210,16 +210,11 @@ body {
     padding: 80px 0;
     background-color: white;
 }
-.portfolio_wrapper {
-    height:  auto;
-    background-color: transparent;
-    border: none;
-}
 .portfolio-list {
-    /* 布局——网格布局 */
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 30px;
+    /* 布局——弹性伸缩盒 */
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-around; 
 }
 .portfolio-item {
     background-color: white; 
@@ -231,7 +226,7 @@ body {
 .portfolio-item:hover {
     transform: translateY(-10px); /* 悬停时向上移动10px */
 }
-.portfolio-info {
+.portfolio-information {
     padding: 20px;
 }
 .portfolio-image{
@@ -246,13 +241,20 @@ body {
     height: auto; 
     object-fit: contain; 
 }
+.portfolio-image video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 .portfolio-information h3 {
     color: var(--text-dark);
     margin-bottom: 10px;
+    font-size: 1.3rem;
 }
 .portfolio-information p {
     color: var(--text-light);
     margin-bottom: 15px;
+    line-height: 1.6;
 }
 .portfolio-links {
     display: flex;
@@ -276,22 +278,12 @@ body {
     padding: 80px 0;
     background: white;
 }
-.blog_wrapper {
-    height: auto;
-    background-color: transparent;
-    border: none;
-}
 /* 博客end */
 
 /* 联系start */
 .contact {
     padding: 80px 0;
     background: white;
-}
-.contact_wrapper {
-    height: auto;
-    background-color: transparent;
-    border: none;
 }
 .contact-content {
     /* 网格布局 */
@@ -353,7 +345,7 @@ body {
     border-radius: 5px; 
 }
 .contact-button:hover {
-  background-color: #28b39d; 
+    background-color: #28b39d; 
 }
 /* 联系end */
 
@@ -364,10 +356,23 @@ body {
     padding: 80px 0;
     background: white;
 }
-.other_wrapper {
-    height: auto;
-    background-color: transparent;
-    border: none;
+.other-item {
+    display: block;
+    text-align: left;
+    font-size: 1.6rem;
+    color: var(--text-light);
+    margin-bottom: 40px;
+}
+.traits {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+
+    /* flex布局 */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 10px;
 }
 /* 其他start */
 
@@ -378,10 +383,10 @@ body {
 
 /* 页脚start */
 .footer {
-  background-color: var(--primary-color);; 
-  color: white; 
-  padding: 30px 0; 
-  text-align: center; 
+    background-color: var(--primary-color);; 
+    color: white; 
+    padding: 30px 0; 
+    text-align: center; 
 }
 
 .footer-content{
