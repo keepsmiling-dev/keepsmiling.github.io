@@ -1,0 +1,78 @@
+/* 超小屏幕(手机) */
+/* 核心：完整显示、居中对齐、空间利用率大 */
+@media screen and (max-width:768px){
+    /* 基础设置 */
+    .container {
+        width: 95%;  
+    }
+    #home, #experience, #portfolio, #blog, #contact, #other {
+        padding-top: 100px;    /* 避免锚点被导航条遮挡 */
+    }
+    .section-title h2 {
+        font-size: 2rem; 
+    }
+    .section-title p {
+        font-size: 1rem;
+        margin-bottom: 40px;
+    }
+
+
+    /* 顶部导航条start */
+    .header {
+        height: auto;       
+        padding: 10px 0;   
+    }
+    .resume, 
+    .topbar-nav {
+        float: none;      /* 取消浮动 */
+        height: auto;       
+        
+        /* 文本 */
+        text-align: center; 
+        line-height: 2;  
+    }
+    .topbar-nav .list {
+        height: auto;
+        line-height: 2;
+
+        /* flex布局 */
+        display: flex;          
+        flex-wrap: wrap;        
+        justify-content: center; 
+    }
+    .topbar-nav .list li {
+        float: none;           
+        padding: 5px 15px;     
+    }
+    /* 顶部导航条end */
+
+
+    /* 主页start */
+    .home_wrapper {
+        padding-top: 100px;
+        
+        justify-content: flex-end;
+        
+        /* 背景 */
+        background-size: 70% 90%;
+    }
+    .home-content {
+        width: 20%; 
+        max-width: none;
+        margin: 0 auto;
+
+        /* 盒子 */
+        margin-right: 5%; 
+        padding-left: 5%;
+    } 
+    .home-title {
+        font-size: 2rem;
+        margin-bottom: 1rem; 
+    }
+    .home-decription {
+        font-size:  1rem;
+    }
+    
+    /* 主页end */
+
+}   
